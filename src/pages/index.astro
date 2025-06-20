@@ -1,18 +1,40 @@
+---
+import Header from "../components/Header.astro";
+import Body from "../components/Body.astro";
+import "../styles/global.css";
+---
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
 
-		<h1>About Me</h1>
-		<h2>... and my new Astro site!</h2>
-		<h1>Sanjeev Bhusal</h1>
+		<title>Sanjeev's Portfolio</title>
+		<style>
+			body,
+			html,
+			* {
+				box-sizing: border-box;
+				font-family: Manrope, sans-serif;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div
+			class="border-[#0F1417] border-b fixed left-0 top-0 right-0 h-[68px] bg-white flex justify-center"
+		>
+			<Header />
+		</div>
+		<Body />
+		<slot />
 	</body>
 </html>
