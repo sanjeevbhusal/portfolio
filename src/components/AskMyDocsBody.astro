@@ -1,0 +1,261 @@
+<div class="max-w-[960px] pb-24 px-6 sm:mx-auto sm:pb-12 sm:px-8">
+  <h1 class="text-2xl font-bold pt-12" id="about">AskMyDocs</h1>
+
+  <p class="mt-4">
+    AskMyDocs is a RAG (Retrieval Augmented Generation) based chatbot
+    application that allows users to upload documents and ask questions against
+    them. The application uses OpenAI models to generate intelligent responses
+    based on the uploaded content.
+  </p>
+
+  <div class="mt-8">
+    <img
+      src="https://res.cloudinary.com/dulrspeey/image/upload/w_640/mpno6rbgtm3hnhamnsmg"
+      alt="AskMyDocs Application UI"
+      class="rounded-xl w-full max-w-[600px] border border-[#EBEDF2]"
+    />
+  </div>
+
+  <section class="pt-12" id="project-goals">
+    <h2 class="text-lg font-bold">Why I Built This Project</h2>
+    <p class="mt-4">
+      The primary goal of this project was to learn how to build a RAG
+      (Retrieval Augmented Generation) application from scratch. I wanted to
+      understand the complete workflow of document processing, embedding
+      generation, similarity search, and LLM integration. This was purely a
+      learning exercise to gain hands-on experience with modern AI/ML
+      technologies and see how they can be integrated into a full-stack
+      application.
+    </p>
+    <p class="mt-4">
+      While the UI isn't the prettiest (as that wasn't the focus), it's
+      functional and responsive across all devices. The main emphasis was on
+      understanding the technical implementation of RAG systems and how to make
+      them work effectively.
+    </p>
+  </section>
+
+  <section class="pt-12" id="features">
+    <h2 class="text-lg font-bold">Features</h2>
+    <ul class="mt-4 space-y-3">
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Authentication:</strong> Users can create accounts and log in using
+          Google authentication
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Document Upload:</strong> Upload documents that are stored securely
+          in Cloudinary
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Document Viewing:</strong> View uploaded documents directly within
+          the application
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Chat History:</strong> Create multiple chat sessions with conversation
+          history
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Answer Sources:</strong> Each AI response includes clickable sources
+          showing which parts of documents were used
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Document Filtering:</strong> Configure which documents to search
+          for each query
+        </div>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-600 font-bold">•</span>
+        <div>
+          <strong>Instant Search:</strong> Document embeddings are generated instantly
+          using OpenAI's embedding model
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="pt-12" id="how-it-works">
+    <h2 class="text-lg font-bold">How It Works</h2>
+    <div class="mt-4 space-y-4">
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">Document Processing</h3>
+        <p>
+          When a user uploads a document, it's split into smaller chunks for
+          easier similarity search and LLM processing. Embeddings are generated
+          for all chunks using OpenAI's embedding model (text-embedding-3-small)
+          and stored in the database with proper relationships.
+        </p>
+      </div>
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">Query Processing</h3>
+        <p>
+          When a user asks a question, an embedding is generated for the query
+          using the same OpenAI model. A similarity search finds the most
+          relevant document chunks, which are then used to create a prompt for
+          another OpenAI model (gpt-3.5-turbo) along with the question, custom
+          instructions, and chat history.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-12" id="challenges">
+    <h2 class="text-lg font-bold">Lessons Learned / Challenges Faced</h2>
+    <div class="mt-4 space-y-4">
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">LangChain and SQLite Integration</h3>
+        <p>
+          I encountered conflicting documentation when integrating LangChain's
+          vector store with Turso (SQLite). LangChain's examples assumed a
+          different schema that turso's setup. I also had zero experience
+          working with embeddings before. I was literally copy pasting code and
+          praying it works. After debugging the issue for few days, I finally
+          found something that worked. I learned a lot about embeddings and
+          similarity search. It actually made me confident enough to drop
+          Langchain and write custom embedding storage and retrieval logic
+        </p>
+      </div>
+
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">LLM Prompt Engineering</h3>
+        <p>
+          This project taught me how much prompts actually matter. I once added
+          a simple line about respecting conversation history, and suddenly the
+          AI started making up completely fake answers. I had to experiment with
+          different prompt structures until I found one that gave the most
+          reliable response. All of a sudden, Prompt Engineering felt like a
+          real job.
+        </p>
+      </div>
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">ORM Limitation</h3>
+        <p>
+          I realized that Drizzle ORM didn't have native support for
+          representing vector column and vector similarity indexes. I ended up
+          writing a custom vector column type and raw sql for similarity search
+          index. Up untill this point, I had never written a custom database
+          type in an ORM. This was a new experience for me.
+        </p>
+      </div>
+      <div class="p-4 bg-gray-50 rounded-lg">
+        <h3 class="font-semibold mb-2">UI Design Iterations</h3>
+        <p>
+          I went through multiple UI iterations trying to display both chats and
+          documents in the sidebar without it feeling cluttered. My first
+          attempt stacked everything vertically, but users had to scroll through
+          dozens of chats to find documents. I then tried to split the sidebar
+          in 2 parts vertically, one for chats and one for documents. But having
+          two scrollbars felt really messy. I then tried the current tabbed
+          interface which both looked great (UI) and solved the issue of making
+          it easier to find both documents and sources (UX). I realized design
+          is like a rabbit hole - you are never done with it. Knowing when to
+          stop is a skill in itself.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-12" id="tech-stack">
+    <h2 class="text-lg font-bold">Tech Stack</h2>
+    <ul class="flex flex-wrap gap-4 mt-4">
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">LangChain</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">OpenAI</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">Next.js 15</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">TailwindCSS</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">Shadcn UI</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">SQLite</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">Turso</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">Drizzle ORM</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">BetterAuth</li>
+      <li class="text-sm px-3 py-2 bg-[#EBEDF2] rounded-lg">Cloudinary</li>
+    </ul>
+  </section>
+
+  <section class="pt-12" id="links">
+    <h2 class="text-lg font-bold">Project Links</h2>
+    <div class="mt-4 space-y-4">
+      <div class="flex items-center gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-blue-600"
+        >
+          <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+          ></path>
+          <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+          ></path>
+        </svg>
+        <a
+          href="https://rag-chatbot-olive-nine.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-blue-600 hover:text-blue-800 font-medium"
+        >
+          Live Demo
+        </a>
+      </div>
+      <div class="flex items-center gap-3">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-blue-600"
+        >
+          <path
+            d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+          ></path>
+          <path d="M9 18c-4.51 2-5-2-7-2"></path>
+        </svg>
+        <a
+          href="https://github.com/sanjeevbhusal/rag-chatbot"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-medium text-blue-600 hover:text-blue-800"
+        >
+          GitHub Repository
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-12" id="note">
+    <div class="p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+      <h3 class="font-semibold text-yellow-800 mb-2">Important Note</h3>
+      <p class="text-sm text-yellow-700">
+        This project was built for learning purposes and is not
+        production-ready. You might find unused functions, console logs, and
+        commented code throughout the codebase. The focus was on understanding
+        RAG implementation rather than code optimization.
+      </p>
+    </div>
+  </section>
+</div>

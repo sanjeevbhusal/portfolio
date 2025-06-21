@@ -1,0 +1,40 @@
+---
+import Header from "../../components/Header.astro";
+import "../../styles/global.css";
+import AskMyDocsBody from "../../components/AskMyDocsBody.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Sanjeev's Portfolio | Ask my Docs</title>
+    <style>
+      body,
+      html,
+      * {
+        box-sizing: border-box;
+        font-family: Manrope, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="fixed bottom-0 left-0 right-0 border-t border-t-[#dad1d1] bg-white sm:static sm:border-t-0 sm:border-b"
+    >
+      <Header highlightProjectTab />
+    </div>
+    <AskMyDocsBody />
+    <slot />
+  </body>
+</html>
