@@ -3,9 +3,9 @@ const { highlightProjectTab } = Astro.props;
 ---
 
 <header
-  class="max-w-[1200px] m-auto flex items-center gap-10 justify-between py-5 sm:px-8"
+  class="max-w-[1200px] m-auto flex items-center justify-between py-5 px-6 sm:px-8 dark:text-white"
 >
-  <h1 class="text-lg font-bold hidden sm:block">
+  <h1 class="text-lg font-bold hidden sm:block dark:text-white">
     <a href="/">Sanjeev's Portfolio</a>
   </h1>
   <nav class="grow sm:grow-0">
@@ -13,31 +13,87 @@ const { highlightProjectTab } = Astro.props;
       <li>
         <a
           href="/#about"
-          class="hover:text-blue-700 cursor-pointer text-sm font-medium"
+          class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
           >About</a
         >
       </li>
-      <li>
+      <li class="hidden sm:block">
         <a
           href="/#work-experience"
-          class="hover:text-blue-700 cursor-pointer text-sm font-medium"
+          class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
           >Work Experience</a
+        >
+      </li>
+      <li class="block sm:hidden">
+        <a
+          href="/#work-experience"
+          class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
+          >Work</a
         >
       </li>
       <li>
         <a
           href="/#projects"
-          class={`hover:text-blue-800 cursor-pointer text-sm font-medium  ${highlightProjectTab ? "text-blue-600" : ""}`}
+          class={`hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white ${highlightProjectTab ? "text-blue-600" : ""}`}
           >Projects</a
         >
       </li>
       <li>
         <a
           href="/#contact"
-          class="hover:text-blue-700 cursor-pointer text-sm font-medium"
+          class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
           >Contact</a
         >
       </li>
     </ul>
   </nav>
+  <!-- Theme Toggle -->
+  <div class="flex items-center pr-4 sm:pr-0">
+    <label class="relative inline-flex items-center cursor-pointer">
+      <input type="checkbox" id="theme-toggle" class="sr-only peer" />
+      <div
+        class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+      >
+      </div>
+      <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+        <span id="theme-label">🌙</span>
+      </span>
+    </label>
+  </div>
 </header>
+
+<script>
+  // Theme toggle functionality
+  const themeToggle = document.getElementById(
+    "theme-toggle",
+  ) as HTMLInputElement;
+  const themeLabel = document.getElementById("theme-label") as HTMLInputElement;
+  const html = document.documentElement;
+
+  // Check for saved theme preference or default to 'light'
+  const currentTheme = localStorage.getItem("theme") || "light";
+
+  // Set initial theme
+  if (currentTheme === "dark") {
+    html.classList.add("dark");
+    themeToggle.checked = true;
+    themeLabel.textContent = "🌙"; // Moon for dark mode
+  } else {
+    html.classList.remove("dark");
+    themeToggle.checked = false;
+    themeLabel.textContent = "☀️"; // Sun for light mode
+  }
+
+  // Toggle theme on checkbox change
+  themeToggle?.addEventListener("change", () => {
+    if (themeToggle.checked) {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      themeLabel.textContent = "🌙"; // Moon for dark mode
+    } else {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      themeLabel.textContent = "☀️"; // Sun for light mode
+    }
+  });
+</script>
