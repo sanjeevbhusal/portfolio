@@ -99,7 +99,7 @@
     <div class="mt-4 space-y-4">
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">Document Processing</h3>
-        <p class="text-sm">
+        <p>
           When a user uploads a document, it's split into smaller chunks for
           easier similarity search and LLM processing. Embeddings are generated
           for all chunks using OpenAI's embedding model (text-embedding-3-small)
@@ -108,7 +108,7 @@
       </div>
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">Query Processing</h3>
-        <p class="text-sm">
+        <p>
           When a user asks a question, an embedding is generated for the query
           using the same OpenAI model. A similarity search finds the most
           relevant document chunks, which are then used to create a prompt for
@@ -124,7 +124,7 @@
     <div class="mt-4 space-y-4">
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">LangChain and SQLite Integration</h3>
-        <p class="text-sm">
+        <p>
           I encountered conflicting documentation when integrating LangChain's
           vector store with Turso (SQLite). LangChain's examples assumed a
           different schema that turso's setup. I also had zero experience
@@ -138,7 +138,7 @@
 
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">LLM Prompt Engineering</h3>
-        <p class="text-sm">
+        <p>
           This project taught me how much prompts actually matter. I once added
           a simple line about respecting conversation history, and suddenly the
           AI started making up completely fake answers. I had to experiment with
@@ -149,7 +149,7 @@
       </div>
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">ORM Limitation</h3>
-        <p class="text-sm">
+        <p>
           I realized that Drizzle ORM didn't have native support for
           representing vector column and vector similarity indexes. I ended up
           writing a custom vector column type and raw sql for similarity search
@@ -159,7 +159,7 @@
       </div>
       <div class="p-4 bg-gray-50 rounded-lg">
         <h3 class="font-semibold mb-2">UI Design Iterations</h3>
-        <p class="text-sm">
+        <p>
           I went through multiple UI iterations trying to display both chats and
           documents in the sidebar without it feeling cluttered. My first
           attempt stacked everything vertically, but users had to scroll through
