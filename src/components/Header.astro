@@ -3,13 +3,13 @@ const { highlightProjectTab } = Astro.props;
 ---
 
 <header
-  class="max-w-[1200px] m-auto flex items-center gap-10 justify-between py-5 px-8"
+  class="max-w-[1200px] m-auto flex items-center gap-10 justify-between py-5 sm:px-8"
 >
   <h1 class="text-lg font-bold hidden sm:block">
     <a href="/">Sanjeev's Portfolio</a>
   </h1>
   <nav class="grow sm:grow-0">
-    <ul class="flex justify-center gap-12 sm:gap-9">
+    <ul class="flex justify-center gap-4 sm:gap-9">
       <li>
         <a
           href="http://localhost:4321/#about"
@@ -27,7 +27,7 @@ const { highlightProjectTab } = Astro.props;
       <li>
         <a
           href="http://localhost:4321/#projects"
-          class={`hover:text-blue-800 cursor-pointer text-sm font-medium ${highlightProjectTab ? "text-blue-600" : ""}`}
+          class={`hover:text-blue-800 cursor-pointer text-sm font-medium  ${highlightProjectTab ? "text-blue-600" : ""}`}
           >Projects</a
         >
       </li>
