@@ -8,7 +8,7 @@ const { highlightProjectTab } = Astro.props;
   <h1 class="text-lg font-bold hidden sm:block dark:text-white">
     <a href="/">Sanjeev's Portfolio</a>
   </h1>
-  <nav class="grow sm:grow-0">
+  <nav class="grow sm:flex items-center gap-12 justify-end">
     <ul class="flex justify-center gap-4 sm:gap-9">
       <li>
         <a
@@ -17,14 +17,14 @@ const { highlightProjectTab } = Astro.props;
           >About</a
         >
       </li>
-      <li class="hidden sm:block">
+      <li class="hidden md:block">
         <a
           href="/#work-experience"
           class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
           >Work Experience</a
         >
       </li>
-      <li class="block sm:hidden">
+      <li class="block md:hidden">
         <a
           href="/#work-experience"
           class="hover:text-blue-700 cursor-pointer text-sm font-medium dark:text-white"
@@ -46,9 +46,21 @@ const { highlightProjectTab } = Astro.props;
         >
       </li>
     </ul>
+
+    <div class="hidden sm:flex items-center pr-4 sm:pr-0">
+      <label class="relative inline-flex items-center cursor-pointer">
+        <input type="checkbox" id="theme-toggle" class="sr-only peer" />
+        <div
+          class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
+        >
+        </div>
+        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+          <span id="theme-label">🌙</span>
+        </span>
+      </label>
+    </div>
   </nav>
-  <!-- Theme Toggle -->
-  <div class="flex items-center pr-4 sm:pr-0">
+  <div class="sm:hidden flex items-center pr-4 sm:pr-0">
     <label class="relative inline-flex items-center cursor-pointer">
       <input type="checkbox" id="theme-toggle" class="sr-only peer" />
       <div
