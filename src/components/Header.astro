@@ -62,13 +62,13 @@ const { highlightProjectTab } = Astro.props;
   </nav>
   <div class="sm:hidden flex items-center pr-4 sm:pr-0">
     <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" id="theme-toggle" class="sr-only peer" />
+      <input type="checkbox" id="theme-toggle-sm" class="sr-only peer" />
       <div
         class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
       >
       </div>
       <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <span id="theme-label">🌙</span>
+        <span id="theme-label-sm">🌙</span>
       </span>
     </label>
   </div>
@@ -79,7 +79,13 @@ const { highlightProjectTab } = Astro.props;
   const themeToggle = document.getElementById(
     "theme-toggle",
   ) as HTMLInputElement;
+  const themeToggleSm = document.getElementById(
+    "theme-toggle-sm",
+  ) as HTMLInputElement;
   const themeLabel = document.getElementById("theme-label") as HTMLInputElement;
+  const themeLabelSm = document.getElementById(
+    "theme-label-sm",
+  ) as HTMLInputElement;
   const html = document.documentElement;
 
   // Check for saved theme preference or default to 'light'
@@ -89,11 +95,15 @@ const { highlightProjectTab } = Astro.props;
   if (currentTheme === "dark") {
     html.classList.add("dark");
     themeToggle.checked = true;
+    themeToggleSm.checked = true;
     themeLabel.textContent = "🌙"; // Moon for dark mode
+    themeLabelSm.textContent = "🌙"; // Moon for dark mode
   } else {
     html.classList.remove("dark");
     themeToggle.checked = false;
+    themeToggleSm.checked = false;
     themeLabel.textContent = "☀️"; // Sun for light mode
+    themeLabelSm.textContent = "☀️"; // Sun for light mode
   }
 
   // Toggle theme on checkbox change
@@ -106,6 +116,18 @@ const { highlightProjectTab } = Astro.props;
       html.classList.remove("dark");
       localStorage.setItem("theme", "light");
       themeLabel.textContent = "☀️"; // Sun for light mode
+    }
+  });
+
+  themeToggleSm?.addEventListener("change", () => {
+    if (themeToggleSm.checked) {
+      html.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+      themeLabelSm.textContent = "🌙"; // Moon for dark mode
+    } else {
+      html.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+      themeLabelSm.textContent = "☀️"; // Sun for light mode
     }
   });
 </script>
