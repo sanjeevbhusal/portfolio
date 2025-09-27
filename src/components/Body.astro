@@ -356,24 +356,88 @@ import Footer from "./Footer.astro";
     </div>
   </section>
 
-  <section class="pt-12 px-6 sm:px-8" id="projects">
-    <h2 class="text-lg font-bold">Recent Projects</h2>
+  <section class="pt-12 px-6 sm:px-8" id="resume">
+    <h2 class="text-lg font-bold">Resume</h2>
+    <div
+      class="mt-4 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
+    >
+      <div
+        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
+      >
+        <div class="flex-1">
+          <h3 class="font-semibold text-gray-900 dark:text-white">
+            Download My Resume
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
+            View my complete professional experience, skills, and achievements
+          </p>
+        </div>
+        <a
+          href="https://media.licdn.com/dms/document/media/v2/D4D2DAQGH54WiGqsV9A/profile-treasury-document-pdf-analyzed/B4DZf.EhMyH0Ak-/0/1752314288698?e=1759968000&v=beta&t=qftfq6YiEFTcoLdur58K5Iq9jShx4W1ZYQwTiTguI8U"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 sm:flex-shrink-0"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7,10 12,15 17,10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          View Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-12" id="projects">
+    <h2 class="text-lg font-bold px-6 sm:px-8">Recent Projects</h2>
     <ul class="flex gap-12 mt-4 flex-wrap sm:gap-16">
       <li class="basis-[300px]">
-        <a href="/projects/ask-my-docs">
-          <!-- Image goes here -->
-          <img
-            src="https://res.cloudinary.com/dulrspeey/image/upload/w_640/mpno6rbgtm3hnhamnsmg"
-            class="rounded-xl h-[170px] w-[300px] border border-[#EBEDF2]"
-          />
+        <div
+          class="p-4 px-6 sm:px-8 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
+        >
+          <a href="/projects/ask-my-docs" class="block">
+            <!-- Image goes here -->
+            <img
+              src="https://res.cloudinary.com/dulrspeey/image/upload/w_640/mpno6rbgtm3hnhamnsmg"
+              class="rounded-xl h-[170px] w-[300px] border border-[#EBEDF2]"
+            />
 
-          <div class="mt-4">
-            <h3 class="font-semibold">Ask my Docs</h3>
-            <p class="text-sm mt-2">
-              A RAG chatbot that can answer questions based on documents
-            </p>
-          </div>
-        </a>
+            <div class="mt-4">
+              <h3
+                class="font-semibold text-blue-700 dark:text-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex gap-0 items-center"
+              >
+                Ask my Docs
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+                  ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
+                >
+              </h3>
+              <p class="text-sm mt-2">
+                A RAG chatbot that can answer questions based on documents
+              </p>
+            </div>
+          </a>
+        </div>
       </li>
     </ul>
 
