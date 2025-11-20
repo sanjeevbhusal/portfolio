@@ -3,54 +3,104 @@ import Footer from "./Footer.astro";
 ---
 
 <div class="max-w-[960px] pb-24 sm:mx-auto sm:pb-12 dark:text-white">
-  <h1 class="text-2xl font-bold pt-12 px-6 sm:px-8" id="about">
-    Hi, I'm Sanjeev, a Full Stack Developer
-  </h1>
-  <p class="mt-4 px-6 sm:px-8">
-    I'm a passionate software developer with 3+ years of experience building
-    scalable web applications. My journey started with a childhood fascination
-    with computers and games like <a
+  <!-- <h1 class="text-2xl font-bold pt-12 px-6 sm:px-8" id="about">
+    Hi, I'm Sanjeev Bhusal, a Full Stack Software Engineer
+  </h1> -->
+
+  <h2
+    class="pt-12 px-6 sm:px-8 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance"
+    id="about"
+  >
+    {"Hi, I'm "}
+    <span
+      class="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient"
+    >
+      Sanjeev Bhusal
+    </span>
+    {", a Full Stack Software Engineer"}
+  </h2>
+
+  <p class="mt-4 px-6 sm:px-8 text-lg">
+    I'm a Fullstack developer with 3+ years of experience building reliable
+    backend systems and thoughtful, user-centered interfaces. I care deeply
+    about quality and build products that feel great to use. I specialize in
+    JavaScript and Python ecosystems, with good working experience in cloud
+    technologies.
+  </p>
+
+  <p class="mt-4 px-6 sm:px-8 text-lg">
+    My journey into software began with my first laptop at age 8. I used to
+    spend hours playing a windows game <a
       href="https://www.retrogames.cz/play_480-DOS.php"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
+      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
       >Dangerous Dave</a
-    >, which inspired me to pursue Computer Science and eventually become the
-    software engineer I dreamed of being.
+    >. It made me curious about how such games were built and set me on a path
+    to pursue Computer Science and eventually become the software engineer I am.
   </p>
 
-  <p class="mt-4 px-6 sm:px-8">
-    Throughout my career, I've gained experience across multiple industries -
-    from traditional dev shops to cutting-edge fintech, cybersecurity, and AI
-    companies. I specialize in JavaScript and Python ecosystems, with good
-    working experience in cloud technologies.
-  </p>
-
-  <p class="mt-4 px-6 sm:px-8">
-    Currently, I work as a Full Stack Developer at <a
+  <p class="mt-4 px-6 sm:px-8 text-lg">
+    Currently, I work as a Full Stack Software Engineer at <a
       href="https://www.securitypalhq.com/"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-blue-600 hover:text-blue-800 dark:hover:text-blue-400"
+      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
       >SecurityPal AI</a
-    >, building products used by Fortune 500 companies and fast-growing
-    startups. I'm always open to exploring new opportunities and connecting with
-    fellow developers and industry professionals.
+    >, building products that power compliance and security for Fortune 500
+    companies and fast-growing startups. Throughout my career, I've had the
+    privilege to work with a <a
+      href="https://www.proshore.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
+      >software agency</a
+    >, <a
+      href="https://www.moru.com.np/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
+      >fintech company</a
+    > and <a
+      href="https://www.securitypalhq.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
+      >cybersecurity & AI company</a
+    >.
+  </p>
+
+  <p class="mt-4 px-6 sm:px-8 text-lg">
+    In my free time, I enjoy playing video games (I used to play esports in
+    past), go on walks, and constantly battle between hitting the gym and
+    hitting my favorite restaurants. I'm also a big fan of <span
+      class="relative inline-block group/madrid cursor-none"
+    >
+      <span
+        class="transition-all duration-300 madrid-text underline hover:no-underline"
+        >Real Madrid</span
+      >
+      <img
+        src="/real-madrid_416x416.webp"
+        alt="Real Madrid Logo"
+        class="absolute left-1/2 -translate-x-1/2 top-full -mt-1 w-24 h-24 opacity-0 invisible group-hover/madrid:opacity-100 group-hover/madrid:visible transition-all duration-300 pointer-events-none z-10"
+      />
+    </span>.
   </p>
 
   <section class="pt-12" id="work-experience">
-    <h2 class="text-lg font-bold px-6 sm:px-8">Work Experience</h2>
+    <h2 class="text-2xl font-bold px-6 sm:px-8">Work Experience</h2>
 
-    <!-- SecurityPal Experience -->
-    <div
-      class="mt-4 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
-    >
-      <h3>
-        <a
-          href="https://www.securitypalhq.com/"
-          class="flex gap-0 items-center text-blue-700 font-semibold group-hover:text-blue-500 dark:text-blue-500 dark:group-hover:text-blue-400 w-fit"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div class="group/section">
+      <!-- SecurityPal Experience -->
+      <a
+        href="https://www.securitypalhq.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block mt-4 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+      >
+        <h3
+          class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
         >
           Software Engineer Level II at SecurityPal AI
           <svg
@@ -63,89 +113,88 @@ import Footer from "./Footer.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
           >
-        </a>
-      </h3>
-      <span class="mt-2 text-sm">2023 - Present</span>
-      <p class="mt-4">
-        I build full-stack solutions for SecurityPal AI, serving Fortune 500
-        companies like OpenAI, Figma, Airtable, Stack Overflow etc. My work
-        spans multiple products including Questionnaire Concierge and Knowledge
-        Library for managing security questionnaires, and Assurance Profile for
-        showcasing company security posture. I've built features from 0-1 like
-        vendor assessment dashboards and secure data rooms with NDA enforcement,
-        while also re-architecting backend systems using GCP Cloud Tasks for
-        better scalability. Beyond product development, I've led initiatives
-        like company-wide email redesigns and built integrations with Slack for
-        real-time notifications, ensuring comprehensive testing coverage with
-        Playwright and Pytest across all workflows.
-      </p>
-      <ul class="flex flex-wrap gap-4 mt-4">
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          TypeScript
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          React
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Redux
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Playwright
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Python
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Django
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Pytest
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          SQL
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Github Actions
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          GCP
-        </li>
-      </ul>
-    </div>
+        </h3>
+        <span class="mt-2 text-sm">2023 - Present</span>
+        <p class="mt-4 text-lg">
+          I build full-stack solutions for SecurityPal AI, serving Fortune 500
+          companies like OpenAI, Figma, Airtable, Stack Overflow etc. My work
+          spans multiple products including Questionnaire Concierge and
+          Knowledge Library for managing security questionnaires, and Assurance
+          Profile for showcasing company security posture. I've built features
+          from 0-1 like vendor assessment dashboards and secure data rooms with
+          NDA enforcement, while also re-architecting backend systems using GCP
+          Cloud Tasks for better scalability. Beyond product development, I've
+          led initiatives like company-wide email redesigns and built
+          integrations with Slack for real-time notifications, ensuring
+          comprehensive testing coverage with Playwright and Pytest across all
+          workflows.
+        </p>
+        <ul class="flex flex-wrap gap-4 mt-4">
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            TypeScript
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            React
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Redux
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Playwright
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Python
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Django
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Pytest
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            SQL
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Github Actions
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            GCP
+          </li>
+        </ul>
+      </a>
 
-    <!-- Proshore Experience -->
-    <div
-      class="mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
-    >
-      <h3>
-        <a
-          href="https://proshore.eu/"
-          class="flex gap-0 items-center text-blue-700 font-semibold group-hover:text-blue-500 dark:text-blue-500 dark:group-hover:text-blue-400 w-fit"
-          target="_blank"
-          rel="noopener noreferrer"
+      <!-- Proshore Experience -->
+      <a
+        href="https://proshore.eu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+      >
+        <h3
+          class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
         >
           Frontend Developer Intern at Proshore
           <svg
@@ -158,60 +207,58 @@ import Footer from "./Footer.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
           >
-        </a>
-      </h3>
-      <span class="mt-2 text-sm">Apr 2023 - June 2023</span>
-      <p class="mt-4">
-        I built a custom time-tracking application using React and TypeScript,
-        tailored to support accurate client billing for the company's 50+
-        employees. The application was designed to potentially save hundreds of
-        dollars per month by replacing paid tools like Clockify. I collaborated
-        closely with design, backend, QA, and project managers to ensure timely
-        project completion while gathering requirements from employees to
-        understand the most essential features.
-      </p>
-      <ul class="flex flex-wrap gap-4 mt-4">
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          React
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          TypeScript
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Tailwind CSS
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Material UI
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          API Integration
-        </li>
-      </ul>
-    </div>
+        </h3>
+        <span class="mt-2 text-sm">Apr 2023 - June 2023</span>
+        <p class="mt-4 text-lg">
+          I built a custom time-tracking application using React and TypeScript,
+          tailored to support accurate client billing for the company's 50+
+          employees. The application was designed to potentially save hundreds
+          of dollars per month by replacing paid tools like Clockify. I
+          collaborated closely with design, backend, QA, and project managers to
+          ensure timely project completion while gathering requirements from
+          employees to understand the most essential features.
+        </p>
+        <ul class="flex flex-wrap gap-4 mt-4">
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            React
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            TypeScript
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Tailwind CSS
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Material UI
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            API Integration
+          </li>
+        </ul>
+      </a>
 
-    <!-- Tai Inc Experience -->
-    <div
-      class="mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
-    >
-      <h3>
-        <a
-          href="https://tai.com.np/en/"
-          class="flex gap-0 items-center text-blue-700 font-semibold group-hover:text-blue-500 dark:text-blue-500 dark:group-hover:text-blue-400 w-fit"
-          target="_blank"
-          rel="noopener noreferrer"
+      <!-- Tai Inc Experience -->
+      <a
+        href="https://tai.com.np/en/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+      >
+        <h3
+          class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
         >
           DevOps Engineer Intern at Tai Inc
           <svg
@@ -224,76 +271,74 @@ import Footer from "./Footer.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
           >
-        </a>
-      </h3>
-      <span class="mt-2 text-sm">Dec 2022 - Mar 2023</span>
-      <p class="mt-4">
-        I developed CI/CD pipelines and Docker configurations to support the
-        production deployment of an AI-powered chatbot on the company website. I
-        deployed a full-stack LAMP e-commerce application on AWS EC2 with
-        automated scaling, leveraging CI/CD workflows to trigger deployments on
-        each Git commit. At the end of my internship, I gave an intro to
-        Kubernetes training session to the entire tech team, comprising over 30
-        members, facilitating their understanding and adoption of
-        containerization and orchestration technologies.
-      </p>
-      <ul class="flex flex-wrap gap-4 mt-4">
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Docker
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          AWS
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Terraform
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          CI/CD
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          CloudFormation
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          EC2
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Load Balancer
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Kubernetes
-        </li>
-      </ul>
-    </div>
+        </h3>
+        <span class="mt-2 text-sm">Dec 2022 - Mar 2023</span>
+        <p class="mt-4 text-lg">
+          I developed CI/CD pipelines and Docker configurations to support the
+          production deployment of an AI-powered chatbot on the company website.
+          I deployed a full-stack LAMP e-commerce application on AWS EC2 with
+          automated scaling, leveraging CI/CD workflows to trigger deployments
+          on each Git commit. At the end of my internship, I gave an intro to
+          Kubernetes training session to the entire tech team, comprising over
+          30 members, facilitating their understanding and adoption of
+          containerization and orchestration technologies.
+        </p>
+        <ul class="flex flex-wrap gap-4 mt-4">
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Docker
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            AWS
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Terraform
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            CI/CD
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            CloudFormation
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            EC2
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Load Balancer
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Kubernetes
+          </li>
+        </ul>
+      </a>
 
-    <!-- Moru Experience -->
-    <div
-      class="mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
-    >
-      <h3>
-        <a
-          href="https://www.moru.com.np/"
-          class="flex gap-0 items-center text-blue-700 font-semibold group-hover:text-blue-500 dark:text-blue-500 dark:group-hover:text-blue-400 w-fit"
-          target="_blank"
-          rel="noopener noreferrer"
+      <!-- Moru Experience -->
+      <a
+        href="https://www.moru.com.np/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+      >
+        <h3
+          class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
         >
           Backend Developer Intern at Moru
           <svg
@@ -306,122 +351,61 @@ import Footer from "./Footer.astro";
             stroke-width="2"
             stroke-linecap="round"
             stroke-linejoin="round"
-            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
+            class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1"
             ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
           >
-        </a>
-      </h3>
-      <span class="mt-2 text-sm">Apr 2022 - Oct 2022</span>
-      <p class="mt-4">
-        I engineered backend functionality for an in-house blog platform using
-        Python, Flask, and PostgreSQL, collaborating cross-functionally with
-        frontend and mobile teams to ensure timely feature delivery. The
-        platform supported authentication, user roles, blog post management, and
-        comment systems. I wrote multiple unit and integration tests using
-        Pytest, ensuring a minimum of 80% code coverage to maintain high code
-        quality and reliability.
-      </p>
-      <ul class="flex flex-wrap gap-4 mt-4">
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Python
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Flask
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Pytest
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          API Development
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Database Design
-        </li>
-        <li
-          class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-blue-100 group-hover:shadow-sm dark:group-hover:bg-blue-900 dark:group-hover:text-white transition-all duration-200"
-        >
-          Git
-        </li>
-      </ul>
-    </div>
-  </section>
+        </h3>
+        <span class="mt-2 text-sm">Apr 2022 - Oct 2022</span>
+        <p class="mt-4 text-lg">
+          I engineered backend functionality for an in-house blog platform using
+          Python, Flask, and PostgreSQL, collaborating cross-functionally with
+          frontend and mobile teams to ensure timely feature delivery. The
+          platform supported authentication, user roles, blog post management,
+          and comment systems. I wrote multiple unit and integration tests using
+          Pytest, ensuring a minimum of 80% code coverage to maintain high code
+          quality and reliability.
+        </p>
+        <ul class="flex flex-wrap gap-4 mt-4">
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Python
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Flask
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Pytest
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            API Development
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Database Design
+          </li>
+          <li
+            class="text-sm px-2 py-1 bg-[#EBEDF2] rounded-lg dark:text-black group-hover:bg-orange-100 group-hover:shadow-sm dark:group-hover:bg-orange-900 dark:group-hover:text-white transition-all duration-200"
+          >
+            Git
+          </li>
+        </ul>
+      </a>
 
-  <!-- Projects -->
-  <section class="pt-12" id="projects">
-    <h2 class="text-lg font-bold px-6 sm:px-8">Recent Projects</h2>
-    <ul class="flex gap-12 mt-4 flex-wrap sm:gap-16">
-      <li class="basis-[300px]">
-        <div
-          class="p-4 px-6 sm:px-8 rounded-lg border border-transparent hover:border-blue-200 hover:shadow-lg hover:shadow-blue-200/60 dark:hover:border-blue-400 dark:hover:shadow-blue-400/40 group"
-        >
-          <a href="/projects/ask-my-docs" class="block">
-            <!-- Image goes here -->
-            <img
-              src="https://res.cloudinary.com/dulrspeey/image/upload/w_640/mpno6rbgtm3hnhamnsmg"
-              class="rounded-xl h-[170px] w-[300px] border border-[#EBEDF2]"
-            />
-
-            <div class="mt-4">
-              <h3
-                class="font-semibold text-blue-700 dark:text-blue-500 group-hover:text-blue-600 dark:group-hover:text-blue-400 flex gap-0 items-center"
-              >
-                Ask my Docs
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="lucide lucide-arrow-up-right-icon lucide-arrow-up-right"
-                  ><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg
-                >
-              </h3>
-              <p class="text-sm mt-2">
-                A RAG chatbot that can answer questions based on documents
-              </p>
-            </div>
-          </a>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Resume -->
-  <section class="pt-12 px-6 sm:px-8" id="resume">
-    <h2 class="text-lg font-bold">Resume</h2>
-    <div
-      class="mt-4 p-6 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800"
-    >
-      <div
-        class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-      >
-        <div class="flex-1">
-          <h3 class="font-semibold text-gray-900 dark:text-white">
-            Download My Resume
-          </h3>
-          <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">
-            View my complete professional experience, skills, and achievements
-          </p>
-        </div>
+      <!-- View Resume Link -->
+      <div class="mt-8 px-6 sm:px-8 text-center">
         <a
-          href="https://media.licdn.com/dms/document/media/v2/D4D2DAQGH54WiGqsV9A/profile-treasury-document-pdf-analyzed/B4DZf.EhMyH0Ak-/0/1752314288698?e=1759968000&v=beta&t=qftfq6YiEFTcoLdur58K5Iq9jShx4W1ZYQwTiTguI8U"
+          href="https://drive.google.com/file/d/1h8VkliYxgLv2IU9OnCw4eJNYC057MVUL/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors duration-200 sm:flex-shrink-0"
+          class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors duration-200"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -438,96 +422,125 @@ import Footer from "./Footer.astro";
             <polyline points="7,10 12,15 17,10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          View Resume
+          Download Full Resume
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="pt-12 px-6 sm:px-8" id="contact">
-    <h2 class="text-lg font-bold">Contact</h2>
-    <p class="mt-2 text-sm">
-      Please reach out if you are looking for a developer or just want to
-      connect in general.
-    </p>
-    <div class="mt-4 flex items-center gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-mail-icon lucide-mail text-blue-600 dark:text-blue-500"
-        ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect
-          x="2"
-          y="4"
-          width="20"
-          height="16"
-          rx="2"></rect></svg
-      >
-      <a
-        href="mailto:bhusalsanjeev23@gmail.com"
-        class="text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-400"
-        >bhusalsanjeev23@gmail.com</a
-      >
-    </div>
-    <div class="mt-4 flex items-center gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-linkedin-icon lucide-linkedin text-blue-600 dark:text-blue-500"
-        ><path
-          d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-        ></path><rect width="4" height="12" x="2" y="9"></rect><circle
-          cx="4"
-          cy="4"
-          r="2"></circle></svg
-      >
-      <a
-        href="https://www.linkedin.com/in/sanjeevbhusal/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-400"
-        >LinkedIn</a
-      >
-    </div>
-    <div class="mt-4 flex items-center gap-2">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        class="lucide lucide-github-icon lucide-github text-blue-600 dark:text-blue-500"
-        ><path
-          d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-        ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
-      >
-      <a
-        href="https://github.com/sanjeevbhusal"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-blue-600 hover:text-blue-800 dark:text-blue-500 dark:hover:text-blue-400"
-        >Github</a
-      >
-    </div>
+  <!-- Projects -->
+  <section class="pt-12" id="projects">
+    <h2 class="text-2xl font-bold px-6 sm:px-8">Recent Projects</h2>
+    <ul class="flex gap-12 mt-4 flex-wrap sm:gap-16">
+      <li class="basis-[300px]">
+        <div
+          class="p-4 px-6 sm:px-8 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group"
+        >
+          <a href="/projects/ask-my-docs" class="block">
+            <!-- Image goes here -->
+            <img
+              src="https://res.cloudinary.com/dulrspeey/image/upload/w_640/mpno6rbgtm3hnhamnsmg"
+              class="rounded-xl h-[170px] w-[300px] border border-[#EBEDF2]"
+            />
 
-    <Footer />
-  </section>
-</div>
+            <div class="mt-4">
+              <h3
+                class="font-semibold text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 flex gap-0 items-center transition-colors duration-300"
+              >
+                Ask my Docs
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Contact -->
+      <section class="pt-12 px-6 sm:px-8" id="contact">
+        <h2 class="text-2xl font-bold">Contact</h2>
+        <p class="mt-2 text-sm">
+          Please reach out if you are looking for a developer or just want to
+          connect in general.
+        </p>
+        <div class="mt-4 flex items-center gap-2 group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-mail-icon lucide-mail text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+            ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect
+              x="2"
+              y="4"
+              width="20"
+              height="16"
+              rx="2"></rect></svg
+          >
+          <a
+            href="mailto:bhusalsanjeev23@gmail.com"
+            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+            >bhusalsanjeev23@gmail.com</a
+          >
+        </div>
+        <div class="mt-4 flex items-center gap-2 group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-linkedin-icon lucide-linkedin text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+            ><path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path><rect width="4" height="12" x="2" y="9"></rect><circle
+              cx="4"
+              cy="4"
+              r="2"></circle></svg
+          >
+          <a
+            href="https://www.linkedin.com/in/sanjeevbhusal/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+            >LinkedIn</a
+          >
+        </div>
+        <div class="mt-4 flex items-center gap-2 group">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="lucide lucide-github-icon lucide-github text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+            ><path
+              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+            ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+          >
+          <a
+            href="https://github.com/sanjeevbhusal"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+            >Github</a
+          >
+        </div>
+
+        <Footer />
+      </section>
+    </div>
