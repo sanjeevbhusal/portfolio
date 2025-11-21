@@ -1,4 +1,5 @@
 ---
+import { Gamepad2, CircleDot, Volleyball } from "lucide-react";
 import Footer from "./Footer.astro";
 ---
 
@@ -8,19 +9,20 @@ import Footer from "./Footer.astro";
   </h1> -->
 
   <h2
-    class="pt-12 px-6 sm:px-8 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance"
+    class="pt-12 px-6 sm:px-8 text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-balance scroll-reveal scroll-reveal-slow"
     id="about"
   >
     {"Hi, I'm "}
     <span
-      class="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient"
+      class="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient inline-block hover:scale-105 transition-transform cursor-default"
+      style="line-height:75px"
     >
       Sanjeev Bhusal
     </span>
     {", a Full Stack Software Engineer"}
   </h2>
 
-  <p class="mt-4 px-6 sm:px-8 text-lg">
+  <p class="mt-4 px-6 sm:px-8 text-lg scroll-reveal scroll-reveal-slow">
     I'm a Fullstack developer with 3+ years of experience building reliable
     backend systems and thoughtful, user-centered interfaces. I care deeply
     about quality and build products that feel great to use. I specialize in
@@ -28,24 +30,34 @@ import Footer from "./Footer.astro";
     technologies.
   </p>
 
-  <p class="mt-4 px-6 sm:px-8 text-lg">
+  <p class="group mt-4 px-6 sm:px-8 text-lg scroll-reveal scroll-reveal-slow">
     My journey into software began with my first laptop at age 8. I used to
     spend hours playing a windows game <a
       href="https://www.retrogames.cz/play_480-DOS.php"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
-      >Dangerous Dave</a
-    >. It made me curious about how such games were built and set me on a path
-    to pursue Computer Science and eventually become the software engineer I am.
+      class="relative font-medium text-primary hover:underline inline-flex items-center gap-1 transition-colors group-hover:text-accent"
+      >Dangerous Dave
+
+      <Gamepad2
+        className="h-4 w-4 transition-transform group-hover:rotate-12"
+      />
+      <span
+        class="absolute -top-8 left-1/2 -translate-x-1/2 bg-popover text-popover-foreground text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-lg border"
+      >
+        The classic! 🎮
+      </span>
+    </a>. It made me curious about how such games were built and set me on a
+    path to pursue Computer Science and eventually become the software engineer
+    I am.
   </p>
 
-  <p class="mt-4 px-6 sm:px-8 text-lg">
+  <p class="mt-4 px-6 sm:px-8 text-lg scroll-reveal scroll-reveal-slow">
     Currently, I work as a Full Stack Software Engineer at <a
       href="https://www.securitypalhq.com/"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-gray-900 dark:text-white hover:text-orange-600 dark:hover:text-orange-400 underline font-medium transition-colors duration-300"
+      class="dark:text-white text-primary hover:text-orange-600 dark:hover:text-orange-400 font-medium transition-colors duration-300"
       >SecurityPal AI</a
     >, building products that power compliance and security for Fortune 500
     companies and fast-growing startups. Throughout my career, I've had the
@@ -70,25 +82,28 @@ import Footer from "./Footer.astro";
     >.
   </p>
 
-  <p class="mt-4 px-6 sm:px-8 text-lg">
+  <p class="group mt-4 px-6 sm:px-8 text-lg scroll-reveal scroll-reveal-slow">
     In my free time, I enjoy playing video games (I used to play esports in
     past), go on walks, and constantly battle between hitting the gym and
     hitting my favorite restaurants. I'm also a big fan of <span
       class="relative inline-block group/madrid cursor-none"
     >
       <span
-        class="transition-all duration-300 madrid-text underline hover:no-underline"
-        >Real Madrid</span
-      >
+        class="transition-all duration-300 madrid-text text-primary items-center gap-1"
+        >Real Madrid
+        <Volleyball
+          className="h-4 w-4 transition-transform group-hover/madrid:rotate-12"
+        />
+      </span>
       <img
-        src="/real-madrid_416x416.webp"
+        src="/real-madrid_416x416-removebg-preview.png"
         alt="Real Madrid Logo"
         class="absolute left-1/2 -translate-x-1/2 top-full -mt-1 w-24 h-24 opacity-0 invisible group-hover/madrid:opacity-100 group-hover/madrid:visible transition-all duration-300 pointer-events-none z-10"
       />
     </span>.
   </p>
 
-  <section class="pt-12" id="work-experience">
+  <section class="pt-12 scroll-reveal" id="work-experience">
     <h2 class="text-2xl font-bold px-6 sm:px-8">Work Experience</h2>
 
     <div class="group/section">
@@ -97,7 +112,7 @@ import Footer from "./Footer.astro";
         href="https://www.securitypalhq.com/"
         target="_blank"
         rel="noopener noreferrer"
-        class="block mt-4 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+        class="block mt-4 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100 scroll-reveal"
       >
         <h3
           class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
@@ -191,7 +206,7 @@ import Footer from "./Footer.astro";
         href="https://proshore.eu/"
         target="_blank"
         rel="noopener noreferrer"
-        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100 scroll-reveal"
       >
         <h3
           class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
@@ -255,7 +270,7 @@ import Footer from "./Footer.astro";
         href="https://tai.com.np/en/"
         target="_blank"
         rel="noopener noreferrer"
-        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100 scroll-reveal"
       >
         <h3
           class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
@@ -335,7 +350,7 @@ import Footer from "./Footer.astro";
         href="https://www.moru.com.np/"
         target="_blank"
         rel="noopener noreferrer"
-        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100"
+        class="block mt-8 px-6 sm:px-8 py-4 rounded-lg border border-transparent hover:border-orange-200 hover:shadow-lg hover:shadow-orange-200/60 dark:hover:border-orange-400 dark:hover:shadow-orange-400/40 group cursor-pointer transition-all duration-300 hover:-translate-y-1 group-has-[:hover]:opacity-50 hover:!opacity-100 scroll-reveal"
       >
         <h3
           class="flex gap-0 items-center text-gray-900 dark:text-white font-semibold w-fit text-xl group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
@@ -400,7 +415,7 @@ import Footer from "./Footer.astro";
       </a>
 
       <!-- View Resume Link -->
-      <div class="mt-8 px-6 sm:px-8 text-center">
+      <div class="mt-8 px-6 sm:px-8 text-center scroll-reveal">
         <a
           href="https://drive.google.com/file/d/1h8VkliYxgLv2IU9OnCw4eJNYC057MVUL/view?usp=drive_link"
           target="_blank"
@@ -429,7 +444,7 @@ import Footer from "./Footer.astro";
   </section>
 
   <!-- Projects -->
-  <section class="pt-12" id="projects">
+  <section class="pt-12 scroll-reveal" id="projects">
     <h2 class="text-2xl font-bold px-6 sm:px-8">Recent Projects</h2>
     <ul class="flex gap-12 mt-4 flex-wrap sm:gap-16">
       <li class="basis-[300px]">
@@ -452,95 +467,129 @@ import Footer from "./Footer.astro";
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
                   height="24"
+                  <
+                  div
+                >
+                </svg>
+              </h3>
             </div>
-          </li>
-        </ul>
-      </section>
 
-      <!-- Contact -->
-      <section class="pt-12 px-6 sm:px-8" id="contact">
-        <h2 class="text-2xl font-bold">Contact</h2>
-        <p class="mt-2 text-sm">
-          Please reach out if you are looking for a developer or just want to
-          connect in general.
-        </p>
-        <div class="mt-4 flex items-center gap-2 group">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-mail-icon lucide-mail text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
-            ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect
-              x="2"
-              y="4"
-              width="20"
-              height="16"
-              rx="2"></rect></svg
-          >
-          <a
-            href="mailto:bhusalsanjeev23@gmail.com"
-            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
-            >bhusalsanjeev23@gmail.com</a
-          >
-        </div>
-        <div class="mt-4 flex items-center gap-2 group">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-linkedin-icon lucide-linkedin text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
-            ><path
-              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-            ></path><rect width="4" height="12" x="2" y="9"></rect><circle
-              cx="4"
-              cy="4"
-              r="2"></circle></svg
-          >
-          <a
-            href="https://www.linkedin.com/in/sanjeevbhusal/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
-            >LinkedIn</a
-          >
-        </div>
-        <div class="mt-4 flex items-center gap-2 group">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="lucide lucide-github-icon lucide-github text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
-            ><path
-              d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
-            ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
-          >
-          <a
-            href="https://github.com/sanjeevbhusal"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
-            >Github</a
-          >
-        </div>
+            <!-- Contact -->
+            <section class="pt-12 px-6 sm:px-8 scroll-reveal" id="contact">
+              <h2 class="text-2xl font-bold">Contact</h2>
+              <p class="mt-2 text-sm">
+                Please reach out if you are looking for a developer or just want
+                to connect in general.
+              </p>
+              <div class="mt-4 flex items-center gap-2 group">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-mail-icon lucide-mail text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+                  ><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"
+                  ></path><rect x="2" y="4" width="20" height="16" rx="2"
+                  ></rect></svg
+                >
+                <a
+                  href="mailto:bhusalsanjeev23@gmail.com"
+                  class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+                  >bhusalsanjeev23@gmail.com</a
+                >
+              </div>
+              <div class="mt-4 flex items-center gap-2 group">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-linkedin-icon lucide-linkedin text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+                  ><path
+                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                  ></path><rect width="4" height="12" x="2" y="9"></rect><circle
+                    cx="4"
+                    cy="4"
+                    r="2"></circle></svg
+                >
+                <a
+                  href="https://www.linkedin.com/in/sanjeevbhusal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+                  >LinkedIn</a
+                >
+              </div>
+              <div class="mt-4 flex items-center gap-2 group">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-github-icon lucide-github text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300 cursor-pointer"
+                  ><path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+                  ></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg
+                >
+                <a
+                  href="https://github.com/sanjeevbhusal"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-gray-900 dark:text-white group-hover:text-orange-600 dark:group-hover:text-orange-400 transition-colors duration-300"
+                  >Github</a
+                >
+              </div>
 
-        <Footer />
-      </section>
-    </div>
+              <Footer />
+            </section>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  // Scroll reveal animation using Intersection Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Slower stagger for intro elements, normal for others
+        const isSlowReveal =
+          entry.target.classList.contains("scroll-reveal-slow");
+        const delay = isSlowReveal ? index * 200 : index * 100;
+
+        setTimeout(() => {
+          entry.target.classList.add("revealed");
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with scroll-reveal class
+  document.addEventListener("DOMContentLoaded", () => {
+    const revealElements = document.querySelectorAll(".scroll-reveal");
+    revealElements.forEach((el) => observer.observe(el));
+  });
+</script>

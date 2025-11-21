@@ -1,4 +1,6 @@
 ---
+import FunMode from "./FunMode";
+
 const { highlightProjectTab } = Astro.props;
 ---
 
@@ -10,7 +12,7 @@ const { highlightProjectTab } = Astro.props;
     <h1
       class="text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient"
     >
-      Sanjeev's Portfolio
+      Sanjeev Bhusal
     </h1>
   </h1>
   <nav class="grow sm:flex items-center gap-12 justify-end">
@@ -18,66 +20,85 @@ const { highlightProjectTab } = Astro.props;
       <li>
         <a
           href="/#about"
-          class="hover:text-orange-600 cursor-pointer text-sm font-medium dark:text-white dark:hover:text-orange-400 transition-colors duration-300"
-          >About</a
+          class="relative transition-colors hover:text-accent group py-2"
+          >About
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+          ></span></a
         >
       </li>
       <li class="hidden md:block">
         <a
           href="/#work-experience"
-          class="hover:text-orange-600 cursor-pointer text-sm font-medium dark:text-white dark:hover:text-orange-400 transition-colors duration-300"
-          >Work Experience</a
+          class="relative transition-colors hover:text-accent group py-2"
+          >Work Experience
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+          ></span></a
         >
       </li>
       <li class="block md:hidden">
         <a
           href="/#work-experience"
-          class="hover:text-orange-600 cursor-pointer text-sm font-medium dark:text-white dark:hover:text-orange-400 transition-colors duration-300"
-          >Work</a
+          class="relative transition-colors hover:text-accent group py-2"
+          >Work
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+          ></span></a
         >
       </li>
       <li>
         <a
           href="/#projects"
-          class={`hover:text-orange-600 cursor-pointer text-sm font-medium dark:text-white dark:hover:text-orange-400 transition-colors duration-300 ${highlightProjectTab ? "text-orange-600" : ""}`}
-          >Projects</a
+          class={`relative transition-colors hover:text-accent group py-2 ${highlightProjectTab ? "text-accent" : ""}`}
+          >Projects
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+          ></span></a
         >
       </li>
       <li>
         <a
           href="/#contact"
-          class="hover:text-orange-600 cursor-pointer text-sm font-medium dark:text-white dark:hover:text-orange-400 transition-colors duration-300"
-          >Contact</a
+          class="relative transition-colors hover:text-accent group py-2"
+          >Contact
+          <span
+            class="absolute inset-x-0 bottom-0 h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform origin-left"
+          ></span></a
         >
       </li>
     </ul>
 
     <div class="hidden sm:flex items-center pr-4 sm:pr-0">
-      <label class="relative inline-flex items-center cursor-pointer">
-        <input type="checkbox" id="theme-toggle" class="sr-only peer" />
-        <div
-          class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600"
-        >
-        </div>
-        <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-          <span id="theme-label">🌙</span>
-        </span>
-      </label>
+      <FunMode client:load />
     </div>
   </nav>
-  <div class="sm:hidden flex items-center pr-4 sm:pr-0">
+
+  <div class="hidden sm:flex items-center pr-4 sm:pr-0">
     <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" id="theme-toggle-sm" class="sr-only peer" />
+      <input type="checkbox" id="theme-toggle" class="sr-only peer" />
       <div
         class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600"
       >
       </div>
       <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <span id="theme-label-sm">🌙</span>
+        <span id="theme-label">🌙</span>
       </span>
     </label>
   </div>
 </header>
+<div class="sm:hidden flex items-center pr-4 sm:pr-0">
+  <label class="relative inline-flex items-center cursor-pointer">
+    <input type="checkbox" id="theme-toggle-sm" class="sr-only peer" />
+    <div
+      class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600"
+    >
+    </div>
+    <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
+      <span id="theme-label-sm">🌙</span>
+    </span>
+  </label>
+</div>
 
 <script>
   // Theme toggle functionality
@@ -92,6 +113,26 @@ const { highlightProjectTab } = Astro.props;
     "theme-label-sm",
   ) as HTMLInputElement;
   const html = document.documentElement;
+
+  // Create audio elements for theme switching sounds
+  const sound = new Audio(
+    "https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3",
+  ); // Night cricket sounds
+
+  // Set volume to be subtle
+  sound.volume = 0.3;
+
+  // Function to play sound effect
+  const playThemeSound = () => {
+    try {
+      sound.currentTime = 0;
+      sound.play().catch(() => {
+        // Silently fail if autoplay is blocked
+      });
+    } catch (error) {
+      // Silently handle any audio errors
+    }
+  };
 
   // Check for saved theme preference or default to 'light'
   const currentTheme = localStorage.getItem("theme") || "light";
@@ -117,10 +158,12 @@ const { highlightProjectTab } = Astro.props;
       html.classList.add("dark");
       localStorage.setItem("theme", "dark");
       themeLabel.textContent = "🌙"; // Moon for dark mode
+      playThemeSound();
     } else {
       html.classList.remove("dark");
       localStorage.setItem("theme", "light");
       themeLabel.textContent = "☀️"; // Sun for light mode
+      playThemeSound();
     }
   });
 
@@ -129,10 +172,12 @@ const { highlightProjectTab } = Astro.props;
       html.classList.add("dark");
       localStorage.setItem("theme", "dark");
       themeLabelSm.textContent = "🌙"; // Moon for dark mode
+      playThemeSound();
     } else {
       html.classList.remove("dark");
       localStorage.setItem("theme", "light");
       themeLabelSm.textContent = "☀️"; // Sun for light mode
+      playThemeSound();
     }
   });
 </script>
