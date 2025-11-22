@@ -1,22 +1,21 @@
 ---
 import FunMode from "./FunMode";
+import { ThemeSelector } from "./ThemeSelector";
 
 const { highlightProjectTab } = Astro.props;
 ---
 
 <header
-  class="max-w-[1200px] m-auto flex items-center justify-between py-5 px-6 sm:px-8 dark:text-white"
+  class="max-w-[1200px] m-auto flex items-center justify-between py-5 px-6 sm:px-8 dark:text-white z-50"
 >
-  <h1 class="text-lg font-bold hidden sm:block dark:text-white">
-    <!-- <a href="/">Sanjeev's Portfolio</a> -->
-    <h1
-      class="text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient"
-    >
-      Sanjeev Bhusal
-    </h1>
+  <h1
+    class="hidden sm:block text-xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient"
+  >
+    Sanjeev Bhusal
   </h1>
+
   <nav class="grow sm:flex items-center gap-12 justify-end">
-    <ul class="flex justify-center gap-4 sm:gap-9">
+    <ul class="flex justify-center gap-4 sm:gap-6">
       <li>
         <a
           href="/#about"
@@ -68,26 +67,20 @@ const { highlightProjectTab } = Astro.props;
         >
       </li>
     </ul>
-
-    <div class="hidden sm:flex items-center pr-4 sm:pr-0">
-      <FunMode client:load />
-    </div>
   </nav>
 
-  <div class="hidden sm:flex items-center pr-4 sm:pr-0">
-    <label class="relative inline-flex items-center cursor-pointer">
-      <input type="checkbox" id="theme-toggle" class="sr-only peer" />
-      <div
-        class="relative hidden md:block w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-orange-300 dark:peer-focus:ring-orange-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-orange-600"
-      >
-      </div>
-      <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
-        <span id="theme-label">🌙</span>
-      </span>
-    </label>
+  <div class="flex items-center gap-4 sm:ml-12">
+    <div class="hidden lg:flex items-center pr-4 sm:pr-0">
+      <FunMode client:load />
+    </div>
+
+    <div class="pr-4 sm:pr-0 flex md:block">
+      <ThemeSelector client:load />
+    </div>
   </div>
 </header>
-<div class="sm:hidden flex items-center pr-4 sm:pr-0">
+
+<!-- <div class="sm:hidden flex items-center pr-4 sm:pr-0">
   <label class="relative inline-flex items-center cursor-pointer">
     <input type="checkbox" id="theme-toggle-sm" class="sr-only peer" />
     <div
@@ -98,7 +91,7 @@ const { highlightProjectTab } = Astro.props;
       <span id="theme-label-sm">🌙</span>
     </span>
   </label>
-</div>
+</div> -->
 
 <script>
   // Theme toggle functionality

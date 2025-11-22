@@ -1,6 +1,6 @@
 "use client";
 
-import { FileText, Github, Linkedin, Mail } from "lucide-react";
+import { Check, FileText, Github, Linkedin, Mail } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 
@@ -13,6 +13,19 @@ type LinkItem = {
 
 export function FloatingContactSidebar() {
 	const [isExpanded, setIsExpanded] = useState(false);
+
+	const [copied, setCopied] = useState(false);
+
+	const handleCopyEmail = (e: React.MouseEvent) => {
+		e.preventDefault();
+		navigator.clipboard.writeText("bhusalsanjeev23@gmail.com");
+		setCopied(true);
+		toast.success("Email copied to clipboard!", {
+			duration: 5000,
+			position: "top-center",
+		});
+		setTimeout(() => setCopied(false), 6000);
+	};
 
 	const links: LinkItem[] = [
 		{
@@ -31,27 +44,16 @@ export function FloatingContactSidebar() {
 			label: "Resume",
 		},
 		{
-			icon: Mail,
+			icon: copied ? Check : Mail,
 			href: "mailto:bhusalsanjeev23@example.com",
-			label: "Email",
+			label: copied ? "Copied!" : "Email",
 			isEmail: true,
 		},
 	];
 
-	const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-		e.preventDefault();
-		const email = "bhusalsanjeev23@gmail.com";
-		navigator.clipboard.writeText(email).then(() => {
-			toast.success("Email copied to clipboard!", {
-				description: email,
-				position: "bottom-left",
-			});
-		});
-	};
-
 	return (
 		<div
-			className="fixed bottom-0 left-14 z-50 flex flex-col gap-2 "
+			className="hidden md:flex fixed bottom-0 left-4 lg:left-14 z-50 flex-col gap-2 "
 			onMouseEnter={() => setIsExpanded(true)}
 			onMouseLeave={() => setIsExpanded(false)}
 		>
@@ -65,8 +67,12 @@ export function FloatingContactSidebar() {
 						rel={
 							link.href.startsWith("http") ? "noopener noreferrer" : undefined
 						}
-						onClick={link.isEmail ? handleEmailClick : undefined}
-						className={`group relative flex items-center rounded-full bg-background/80 backdrop-blur-sm border border-border p-3 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/10 hover:text-accent ${isExpanded ? "gap-3" : "gap-0"}`}
+						onClick={link.isEmail ? handleCopyEmail : undefined}
+						className={`group relative flex items-center rounded-full bg-background/80 backdrop-blur-sm border border-border p-2 lg:p-3 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-accent/10 hover:text-accent ${isExpanded ? "gap-3" : "gap-0"} ${
+							link.label === "Copied!"
+								? "text-green-500 hover:text-green-500 border-green-200 bg-green-50 dark:bg-green-950 dark:border-green-800"
+								: ""
+						}`}
 						style={{
 							animationDelay: `${index * 50}ms`,
 						}}

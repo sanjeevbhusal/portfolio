@@ -139,9 +139,9 @@
   }
 
   .dark body {
-    background: radial-gradient(circle at 20% 30%, oklch(0.35 0.12 250 / 0.12) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, oklch(0.42 0.14 45 / 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 50% 50%, oklch(0.3 0.08 180 / 0.06) 0%, transparent 60%), var(--background);
+    background: radial-gradient(circle at 20% 30%, oklch(0.35 0.15 250 / 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, oklch(0.42 0.18 45 / 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 50% 50%, oklch(0.3 0.1 180 / 0.1) 0%, transparent 60%), var(--background);
   }
 }
 
@@ -201,7 +201,7 @@
 }
 
 .dark .madrid-text {
-  color: #ffffff;
+  /* color: #ffffff; */
   /* white */
 }
 
